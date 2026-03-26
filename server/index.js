@@ -25,12 +25,12 @@ process.on("unhandledRejection", (err) => {
   console.error("PROMISE ERROR:", err);
 });
 
-app.use(
-  cors({
-    origin: getAllowedOrigins(),
-    credentials: true,
-  }),
-);
+const cors = require("cors");
+
+app.use(cors({
+  origin: "https://golfcharitysubscriptionplatform-chi.vercel.app",
+  credentials: true
+}));
 
 app.get("/api/health", (_req, res) => {
   res.json({ ok: true });
