@@ -1,4 +1,4 @@
-const API = (import.meta.env.VITE_API_URL || "").replace(/\/$/, "");
+const API = (import.meta.env.VITE_API_URL || "https://golf-charity-subscription-platform-bj2n.onrender.com").replace(/\/$/, "");
 
 function toApiUrl(path: string) {
   if (/^https?:\/\//.test(path)) return path;
