@@ -13,11 +13,10 @@ function assertConfig() {
 }
 
 function getAllowedOrigins() {
-  const raw = process.env.CLIENT_URL || "http://localhost:5173";
-  return raw
-    .split(",")
-    .map((value) => value.trim())
-    .filter(Boolean);
+  return [
+    process.env.CLIENT_URL,
+    "http://localhost:5173", 
+  ];
 }
 
 module.exports = {
